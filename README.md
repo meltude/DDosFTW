@@ -1,6 +1,7 @@
 # Wallfox
 
-![screenshot](docs/tofuboy.webp)
+![screenshot](docs/image.webp)
+
 ---
 
 _this ia fake hacking server/accouts program just for trolling, nothing more_
