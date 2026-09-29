@@ -1,4 +1,4 @@
-module WallFox
+module Slagger
 
 go 1.26.3
 

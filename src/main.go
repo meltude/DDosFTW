@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Wallfox/src/HackSequence"
-	logo "Wallfox/src/Logo"
+	"Slagger/src/HackSequence"
+	logo "Slagger/src/Logo"
 	"bufio"
 	"fmt"
 	"os"
