@@ -1,10 +1,9 @@
-# Wallfox
-
+# Slagger
 ![screenshot](docs/image.webp)
 
 ---
 
-_this ia fake hacking server/accouts program just for trolling, nothing more_
+_this is fake hacking server/accouts program just for trolling, nothing more_
 
 _it does absolutetly nothing, just messing with output_
 
