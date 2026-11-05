@@ -3,10 +3,12 @@
 all: build
 
 build:
-	go build -o bin/main src/main.go
+	cargo build --release
+	mkdir -p bin
+	cp target/release/DDosFTW bin/DDosFTW
 
 run:
-	go run src/main.go
+	cargo run
 
 clean:
-	rm -rf bin/
+	rm -rf bin/ target/

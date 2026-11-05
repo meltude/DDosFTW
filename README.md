@@ -1,5 +1,6 @@
-# Slagger
-![screenshot](docs/image.webp)
+# DDosFTW
+
+<img src="docs/image.webp" alt="screenshot" width="400">
 
 ---
 
@@ -11,18 +12,26 @@ _u can troll people with it_
 
 ---
 
+## Modes:
+
+- `[1] domain hack` — fake domain takeover sequence
+- `[2] account hack` — fake account takeover with session, device and profile details
+- `[3] de-anonymise` — fake de-anonymisation report (profile correlation, location and confidence guess)
+
+everything is fabricated: no network access, no real lookups, no data collection.
+
 ## Building:
 
 for now make sure that u have all dependecies that required for this program
 
 ```packages
-go & make
+rust & make
 ```
 
 lets begin with building using GNU Make:
 
 ```bash
-cd Wallfox
+cd DDosFTW
 make
 ```
 
@@ -31,13 +40,23 @@ easy right?
 so here the much harder way:
 
 ```bash
-cd Wallfox
-go build ./src
+cd DDosFTW
+cargo build --release
 ```
 
 and for my favorite NixOS users:
 
 ```bash
-cd Wallfox
-nix-shell shell.nix
+cd DDosFTW
+nix develop
 ```
+
+or build it with the flake:
+
+```bash
+cd DDosFTW
+nix build
+./result/bin/DDosFTW
+```
+
+the flake uses flake-parts and works on x86_64/aarch64 Linux and Apple Silicon macOS.
