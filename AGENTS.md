@@ -7,7 +7,7 @@ Fake "hacking" CLI for trolling: animated, entirely fictional output. No network
 - `make build` — `cargo build --release`, then copies the binary to `bin/main`
 - `make run` — `cargo run` (debug build)
 - `make clean` — remove `bin/` and `target/`
-- `nix develop` — flake dev shell (rustc/cargo/rust-analyzer/make) that runs `make build` on entry
+- `nix develop` — flake dev shell (rustc/cargo/rust-analyzer/make)
 - `nix build` — flake package build (`packages.default`), result at `./result/bin/DDosFTW`
 - If `cargo` is not on PATH: `nix develop --command cargo build --release`
 
@@ -31,6 +31,5 @@ Fake "hacking" CLI for trolling: animated, entirely fictional output. No network
 ## Gotchas
 
 - `bin/` (Makefile output) and `target/` (Cargo) are gitignored; `AGENTS.md` is also gitignored in this repo.
-- The dev shell sets `NIX_ENFORCE_PURITY=0`; without it the shellHook's `make build` fails to link into `./target` (`impure path ... used in link`).
 - Flake inputs are pinned by `flake.lock`; refresh with `nix flake update`.
 - Nix flakes only see Git-tracked files: `git add -N <file>` new files used by the flake before building, or `nix build` fails with missing paths.

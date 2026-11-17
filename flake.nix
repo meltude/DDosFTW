@@ -44,14 +44,6 @@
               rust-analyzer
               gnumake
             ];
-
-            NIX_ENFORCE_PURITY = 0;
-
-            shellHook = ''
-              rustc --version
-              echo "Autobuilding project..."
-              make build
-            '';
           };
         };
     };
